@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>net.thevpc.skeleton</groupId>
+        <artifactId>skeleton-module-root</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>skeleton-module-ws-grpc</artifactId>
+    <name>Skeleton Module :: WS gRPC</name>
+    <description>Reserved gRPC server adapter slot</description>
+    <dependencies>
+        <dependency>
+            <groupId>net.thevpc.skeleton</groupId>
+            <artifactId>skeleton-module-service-api</artifactId>
+        </dependency>
+    </dependencies>
+</project>

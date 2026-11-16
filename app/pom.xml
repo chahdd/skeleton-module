@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>net.thevpc.skeleton</groupId>
+        <artifactId>skeleton-module-root</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>skeleton-module-app</artifactId>
+    <name>Skeleton Module :: Application</name>
+    <description>Spring Boot application assembling all layers</description>
+
+    <dependencies>
+        <!-- REST Controllers -->
+        <dependency>
+            <groupId>net.thevpc.skeleton</groupId>
+            <artifactId>skeleton-module-ws-rest</artifactId>
+        </dependency>
+
+        <!-- Service Implementation -->
+        <dependency>
+            <groupId>net.thevpc.skeleton</groupId>
+            <artifactId>skeleton-module-service-impl</artifactId>
+        </dependency>
+
+        <!-- Choose your DAL implementation(s) -->
+        <!-- JPA Implementation -->
+        <dependency>
+            <groupId>net.thevpc.skeleton</groupId>
+            <artifactId>skeleton-module-dal-jpa</artifactId>
+        </dependency>
+
+        <!-- MongoDB Implementation (optional, comment out if not needed) -->
+        <!--
+        <dependency>
+            <groupId>net.thevpc.skeleton</groupId>
+            <artifactId>skeleton-module-dal-mongodb</artifactId>
+        </dependency>
+        -->
+
+        <!-- REST Client (optional, for microservices communication) -->
+        <!--
+        <dependency>
+            <groupId>net.thevpc.skeleton</groupId>
+            <artifactId>skeleton-module-service-rest-cli</artifactId>
+        </dependency>
+        -->
+
+        <!-- Spring Boot Starter Web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Activate Resilience4j annotations on outbound adapters when used -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.resilience4j</groupId>
+            <artifactId>resilience4j-spring-boot3</artifactId>
+        </dependency>
+
+        <!-- NAF API is available without bootstrapping a workspace at startup -->
+        <dependency>
+            <groupId>net.thevpc.nuts</groupId>
+            <artifactId>nuts</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Actuator for monitoring -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- Micrometer for metrics -->
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- Database driver (choose based on your DAL) -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- PostgreSQL (uncomment if needed) -->
+        <!--
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        -->
+
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Testing -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Architecture Tests -->
+        <dependency>
+            <groupId>com.tngtech.archunit</groupId>
+            <artifactId>archunit-junit5</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>naf-spring</id>
+            <dependencies>
+                <dependency>
+                    <groupId>net.thevpc.nuts</groupId>
+                    <artifactId>nuts-spring-boot</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+</project>
