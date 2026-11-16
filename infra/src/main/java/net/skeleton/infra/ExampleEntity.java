@@ -1,4 +1,4 @@
-package net.thevpc.skeleton.infra;
+package net.skeleton.infra;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

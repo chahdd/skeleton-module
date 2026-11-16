@@ -1,4 +1,4 @@
-package net.thevpc.skeleton.dal.jpa;
+package net.skeleton.dal.jpa;
 
 import jakarta.persistence.*;
 import lombok.Data;

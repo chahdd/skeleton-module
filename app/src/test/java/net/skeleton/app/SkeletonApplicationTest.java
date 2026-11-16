@@ -1,8 +1,8 @@
-package net.thevpc.skeleton.app;
+package net.skeleton.app;
 
-import net.thevpc.skeleton.infra.EntityStatus;
-import net.thevpc.skeleton.infra.ExampleEntity;
-import net.thevpc.skeleton.service.api.ExampleService;
+import net.skeleton.infra.EntityStatus;
+import net.skeleton.infra.ExampleEntity;
+import net.skeleton.service.api.ExampleService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package net.thevpc.skeleton.app;
+package net.skeleton.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,9 +23,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  * - Logging (Logback)
  */
 @SpringBootApplication
-@ComponentScan(basePackages = "net.thevpc.skeleton")
-@EntityScan(basePackages = "net.thevpc.skeleton.dal.jpa")
-@EnableJpaRepositories(basePackages = "net.thevpc.skeleton.dal.jpa")
+@ComponentScan(basePackages = "net.skeleton")
+@EntityScan(basePackages = "net.skeleton.dal.jpa")
+@EnableJpaRepositories(basePackages = "net.skeleton.dal.jpa")
 public class SkeletonApplication {
 
     public static void main(String[] args) {

@@ -1,8 +1,8 @@
-package net.thevpc.skeleton.dal.jpa;
+package net.skeleton.dal.jpa;
 
-import net.thevpc.skeleton.dal.api.ExampleRepository;
-import net.thevpc.skeleton.infra.ExampleEntity;
-import net.thevpc.skeleton.infra.EntityStatus;
+import net.skeleton.dal.api.ExampleRepository;
+import net.skeleton.infra.ExampleEntity;
+import net.skeleton.infra.EntityStatus;
 import org.springframework.stereotype.Repository;
 import lombok.RequiredArgsConstructor;
 

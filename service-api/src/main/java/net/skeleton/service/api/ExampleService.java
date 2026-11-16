@@ -1,6 +1,6 @@
-package net.thevpc.skeleton.service.api;
+package net.skeleton.service.api;
 
-import net.thevpc.skeleton.infra.ExampleEntity;
+import net.skeleton.infra.ExampleEntity;
 import java.util.List;
 import java.util.Optional;
 

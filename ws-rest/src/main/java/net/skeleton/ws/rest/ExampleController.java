@@ -1,11 +1,11 @@
-package net.thevpc.skeleton.ws.rest;
+package net.skeleton.ws.rest;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import net.thevpc.skeleton.infra.ExampleEntity;
-import net.thevpc.skeleton.service.api.ExampleService;
+import net.skeleton.infra.ExampleEntity;
+import net.skeleton.service.api.ExampleService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

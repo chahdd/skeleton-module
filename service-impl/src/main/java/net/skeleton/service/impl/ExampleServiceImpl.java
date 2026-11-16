@@ -1,10 +1,10 @@
-package net.thevpc.skeleton.service.impl;
+package net.skeleton.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import net.thevpc.skeleton.dal.api.ExampleRepository;
-import net.thevpc.skeleton.infra.ExampleEntity;
-import net.thevpc.skeleton.service.api.ExampleService;
+import net.skeleton.dal.api.ExampleRepository;
+import net.skeleton.infra.ExampleEntity;
+import net.skeleton.service.api.ExampleService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

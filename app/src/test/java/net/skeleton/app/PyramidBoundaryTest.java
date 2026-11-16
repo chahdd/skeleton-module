@@ -1,4 +1,4 @@
-package net.thevpc.skeleton.app;
+package net.skeleton.app;
 
 import com.tngtech.archunit.core.domain.JavaClasses;
 import com.tngtech.archunit.core.importer.ClassFileImporter;
@@ -8,7 +8,7 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 
 class PyramidBoundaryTest {
 
-    private final JavaClasses classes = new ClassFileImporter().importPackages("net.thevpc.skeleton");
+    private final JavaClasses classes = new ClassFileImporter().importPackages("net.skeleton");
 
     @Test
     void webLayerUsesOnlyPublishedServiceContract() {
